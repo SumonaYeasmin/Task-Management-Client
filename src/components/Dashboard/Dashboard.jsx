@@ -48,6 +48,33 @@ const Dashboard = () => {
         }
     }
 
+    
+    const handleDeleteTask = async (id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                try {
+                    const res = await axios.delete(`http://localhost:5000/all-task/${id}`);
+                    toast.success("Task deleted successfully!");
+                    refetch();
+                } catch (error) {
+                    toast.error(`Failed to delete task: ${error.response?.data?.message || error.message}`);
+                }
+
+            }
+        });
+
+   
+    };
+
+
 
     return (
         <div className="">
