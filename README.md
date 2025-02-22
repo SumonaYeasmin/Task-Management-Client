@@ -40,9 +40,9 @@ npm install
 
 # Set up Firebase Authentication
 # Create a .env file and add your Firebase credentials
-VITE_FIREBASE_API_KEY=your_api_key
-VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
-VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_API_KEY=VITE_API_KEY
+VITE_FIREBASE_AUTH_DOMAIN=VITE_AUTH_DOMAIN
+VITE_FIREBASE_PROJECT_ID=VITE_PROJECT_ID
 
 # Start the development server
 npm run dev
