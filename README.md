@@ -5,7 +5,7 @@
 A simple and efficient **Task Management Application** where users can create, edit, delete, and reorder tasks using drag-and-drop. Tasks are categorized into **To-Do, In Progress, and Done**, and changes are instantly saved in the database. The app ensures real-time synchronization across all devices.
 
 ## 🚀 Live Demo
-🔗 [Live Application](#) *(Update with actual deployment link)*
+🔗 [Live Application](#) *(https://task-management-3d3f4.web.app/)*
 
 ## 📦 Dependencies
 This project uses the following dependencies:
@@ -32,7 +32,7 @@ Follow these steps to set up the project locally:
 
 ```sh
 # Clone the repository
-git clone https://github.com/your-username/task-management-app.git
+git clone https://github.com/SumonaYeasmin/task-management-app.git
 cd task-management-app
 
 # Install dependencies
