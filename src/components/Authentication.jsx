@@ -21,13 +21,7 @@ const Authentication = () => {
     });
 
     const handleLogin = async () => {
-        // loginWithGoogle()
-        //     .then(result => {
-        //         console.log(result.user);
-        //     })
-        //     .catch(error => {
-        //         console.log(error.code);
-        //     })
+     
         try {
             const result = await loginWithGoogle();
             const userInfo = {
