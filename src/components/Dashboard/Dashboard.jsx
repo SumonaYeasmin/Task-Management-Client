@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 import { useQuery } from "@tanstack/react-query";
 import { FaEdit, FaTrash } from "react-icons/fa";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 
 import { AuthContext } from "../../provider/AuthProvider";
 import Navbar from "../Navbar/Navbar";
@@ -25,7 +25,27 @@ const Dashboard = () => {
     });
 
     const handleAddTask =async(e) =>{
-        
+        e.preventDefault();
+        const form = e.target;
+        const title = form.title.value;
+        const description = form.description.value;
+        const category = form.category.value;
+
+        const now = new Date();
+        const dateTimeUTC = now.toISOString();
+
+        const newTask = { title, description, category, dateTimeUTC, userEmail: user?.email };
+
+        try {
+            const res = await axios.post("http://localhost:5000/all-task", newTask);
+            if (res.data.insertedId) {
+                toast.success(`🎉 Task added successfully: "${title}"`);
+                refetch();
+                setIsModalOpen(false);
+            }
+        } catch (error) {
+            toast.error(`⚠️ An error occurred: ${error.response?.data?.message || error.message}`);
+        }
     }
 
 
