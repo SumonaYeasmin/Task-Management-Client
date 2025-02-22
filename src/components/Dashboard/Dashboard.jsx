@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 import { useQuery } from "@tanstack/react-query";
 import { FaEdit, FaTrash } from "react-icons/fa";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 import { AuthContext } from "../../provider/AuthProvider";
 import Navbar from "../Navbar/Navbar";
@@ -24,7 +24,11 @@ const Dashboard = () => {
         }
     });
 
-    
+    const handleAddTask =async(e) =>{
+        
+    }
+
+
     return (
         <div className="">
         {/* Navbar */}
