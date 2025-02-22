@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Authentication from "../components/Authentication";
 import Dashboard from "../components/Dashboard/Dashboard";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <Dashboard></Dashboard>
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
     }
 ])
 export default router;

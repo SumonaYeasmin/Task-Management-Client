@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 
-import { MdLogout } from 'react-icons/md';
+import { FaSignOutAlt } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+
 
 const Navbar = () => {
     const { user, signOutUser } = useContext(AuthContext);
@@ -21,7 +22,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-gray-500 text-white py-4 px-2">
+        <nav className="bg-teal-500 text-white py-4 px-2">
             <div className="container mx-auto flex justify-between items-center">
                 <h1 className="text-2xl font-bold">Task Manager</h1>
                 <div className="flex items-center gap-3">
@@ -41,9 +42,9 @@ const Navbar = () => {
                     {/* Log Out Button */}
                     <button
                         onClick={handleLogout}
-                        className="bg-red-500 hover:bg-red-600 px-3 py-2 rounded-md text-base font-semibold transition"
+                        className="bg-teal-700 hover:bg-teal-600 px-3 py-2 rounded-md text-base font-semibold transition"
                     >
-                        <span className='flex items-center gap-1'><MdLogout size={24} />  Log Out</span>
+                        <span className='flex items-center gap-1'><FaSignOutAlt size={24} />  Log Out</span>
                     </button>
                 </div>
             </div>
